@@ -1,12 +1,15 @@
-export class connect{
+export class panas{
     name
-    static instanceConnect;
-    constructor({name: n} =  { name : "INEIDY"}){
-        if(connect.instanceConnect){
-            return connect.instanceConnect;
+    static instancia;
+    constructor({name: n} =  { name : "TULIO"}){
+        if(panas.instancia){
+            return panas.instancia;
         }
         this.name = n
-        connect.instanceConnect = this;
-        return connect.instanceConnect;
+        panas.instancia = this;
+        return panas.instancia;
+    }
+    destructor(){
+        panas.instancia = undefined
     }
 }
